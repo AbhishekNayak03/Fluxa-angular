@@ -17,7 +17,7 @@ export class AuditComponent implements OnInit {
   public showFlag: Boolean = false;
   public auditData: Array<any>=[];
   public auditHeaders: Array<any>=[];
-  public dropdownn:any;
+  public userText:any;
   public searchText:any;
   public subsequenceText:any;
   public messageText:any;
@@ -52,14 +52,14 @@ export class AuditComponent implements OnInit {
     this.totalPageSizee = Math.ceil(this.body.length / this.pageDetail.pageSizee);
   }
   
-  // dropDown() {
-  //   if (this.dropdownn == "") {
-  //     this.body = this.auditData;
-  //   }
-  //   else{
-  //     this.search('User',this.dropdownn);
-  //   }
-  // }
+  userSearch() {
+    if (this.userText == "") {
+      this.body = this.auditData;
+    }
+    else{
+      this.search('User',this.userText);
+    }
+  }
 
   idSearch() {
     if (this.searchText == "") {
@@ -123,12 +123,12 @@ export class AuditComponent implements OnInit {
     }
   }
 
-  userSearch(name:string){
-    this.search('User','Chanjal N C (chanjal)');
-    this.search('User','shahil cc (shahil)');
+  // userSearch(name:string){
+  //   this.search('User','Chanjal N C (chanjal)');
+  //   this.search('User','shahil cc (shahil)');
     // this.search('User','Bishwadeep Chaudhary (bishwadeep)');
     // this.search('User','Ankitha naik (Ankitha)');
-  }
+  // }
 
   search(value: string, type: any) {
     console.log("value",value);

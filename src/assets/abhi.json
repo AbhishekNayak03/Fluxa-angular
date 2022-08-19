@@ -1,7 +1,7 @@
 {
 
     "Headers":[
-        {"id" : "user" , "labelName": "User", "type":"dropdown"},
+        {"id" : "user" , "labelName": "User", "type":"select"},
         {"id" : "auditid" ,"labelName" : "ID", "type":"select"},
         {"id" : "subid" ,"labelName" : "Subsequence", "type":"textbox"},
         {"id" : "auditmsg" ,"labelName" : "Message", "type":"textbox"},
@@ -28,7 +28,7 @@
     "ID":281641,
     "Subsequence": 281641.1,
     "Message": "Checked out Recipe with Step Name: '!!!!!!'",
-    "Action": "Change",
+    "Action": "update",
     "Type": "Recipe",
     "Label" : "GR-decor-01",
     "Version": "v0.6"
@@ -39,7 +39,7 @@
     "ID":281642,
     "Subsequence": 281457.1,
     "Message": "Exported the CSV file Parameter.csv from Parameter configuration page",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "CSV Download",
     "Label" : "Configuration,Parameter.csv,",
     "Version": "NA"
@@ -50,7 +50,7 @@
     "ID":281413,
     "Subsequence": 281412.1,
     "Message": "Checked out Recipe with Step Name: 0108-step9 Recipe Name: gr-0408-2 Recipe Id: recipe_e50a82fb330a4e2a9425c77f82cd8155 by ankita",
-    "Action": "Change",
+    "Action": "update",
     "Type": "Recipe",
     "Label" : "gr-0408-2",
     "Version": "v0.3"
@@ -72,10 +72,10 @@
     "ID":281645,
     "Subsequence": 281643.1,
     "Message": "Added Material Template: Sprint Temp for Activity 'Step Information'",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "Recipe",
     "Label" : "GR SP",
-    "Version": "v0.5"
+    "Version": "v0.1"
     
   },
   {
@@ -86,7 +86,7 @@
     "Action": "Change",
     "Type": "Recipe",
     "Label" : "GR-decor-01",
-    "Version": "v0.6"
+    "Version": "v0.7"
     
   },
   {
@@ -94,7 +94,7 @@
     "ID":281647,
     "Subsequence": 281457.1,
     "Message": "Exported the CSV file Parameter.csv from Parameter configuration page",
-    "Action": "Change",
+    "Action": "update",
     "Type": "CSV Download",
     "Label" : "Configuration,Parameter.csv,",
     "Version": "NA"
@@ -105,10 +105,10 @@
     "ID":281418,
     "Subsequence": 281412.1,
     "Message": "Checked out Recipe with Step Name: 0108-step9 Recipe Name: gr-0408-2 Recipe Id: recipe_e50a82fb330a4e2a9425c77f82cd8155 by ankita",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "Recipe",
     "Label" : "gr-0408-2",
-    "Version": "v0.3"
+    "Version": "v0.2"
     
   },
   {
@@ -127,10 +127,10 @@
     "ID":281641,
     "Subsequence": 281643.1,
     "Message": "Added Material Template: Sprint Temp for Activity 'Step Information'",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "Recipe",
     "Label" : "GR SP",
-    "Version": "v0.5"
+    "Version": "v0.9"
     
   },
   {
@@ -138,10 +138,10 @@
     "ID":281641,
     "Subsequence": 281641.1,
     "Message": "Checked out Recipe with Step Name: '!!!!!!'",
-    "Action": "Change",
+    "Action": "update",
     "Type": "Recipe",
     "Label" : "GR-decor-01",
-    "Version": "v0.6"
+    "Version": "v1.0"
     
   },
   {
@@ -160,7 +160,7 @@
     "ID":281412,
     "Subsequence": 281412.1,
     "Message": "Checked out Recipe with Step Name: 0108-step9 Recipe Name: gr-0408-2 Recipe Id: recipe_e50a82fb330a4e2a9425c77f82cd8155 by ankita",
-    "Action": "Change",
+    "Action": "update",
     "Type": "Recipe",
     "Label" : "gr-0408-2",
     "Version": "v0.3"
@@ -171,10 +171,10 @@
     "ID":281414,
     "Subsequence": 281414.1,
     "Message": "Added Material Template: 2107-mat temp1 for Activity 'Activity ster-'. Updated Template with activity name: Activity ster-, Activity ID: activity_12b46f264a4644768eb0611c660bea63",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "Configuration",
     "Label" : "Activity",
-    "Version": "ster-NA"
+    "Version": "v0.4"
     
   },
   {
@@ -196,7 +196,7 @@
     "Action": "Change",
     "Type": "Recipe",
     "Label" : "GR-decor-01",
-    "Version": "v0.6"
+    "Version": "v0.1"
     
   },
   {
@@ -204,7 +204,7 @@
     "ID":281647,
     "Subsequence": 281457.1,
     "Message": "Exported the CSV file Parameter.csv from Parameter configuration page",
-    "Action": "Change",
+    "Action": "update",
     "Type": "CSV Download",
     "Label" : "Configuration,Parameter.csv,",
     "Version": "NA"
@@ -215,7 +215,7 @@
     "ID":281412,
     "Subsequence": 281412.1,
     "Message": "Checked out Recipe with Step Name: 0108-step9 Recipe Name: gr-0408-2 Recipe Id: recipe_e50a82fb330a4e2a9425c77f82cd8155 by ankita",
-    "Action": "Change",
+    "Action": "delete",
     "Type": "Recipe",
     "Label" : "gr-0408-2",
     "Version": "v0.3"
@@ -226,7 +226,7 @@
     "ID":281414,
     "Subsequence": 281414.1,
     "Message": "Added Material Template: 2107-mat temp1 for Activity 'Activity ster-'. Updated Template with activity name: Activity ster-, Activity ID: activity_12b46f264a4644768eb0611c660bea63",
-    "Action": "Change",
+    "Action": "update",
     "Type": "Configuration",
     "Label" : "Activity",
     "Version": "ster-NA"

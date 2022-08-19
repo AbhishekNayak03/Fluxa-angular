@@ -1,4 +1,4 @@
-<div class="toolbar" role="banner" style="width: 100rem;">
+<div class="toolbar" role="banner" style="width: 1410px;">
     <span style="margin-left: 20px;">FLUXA</span>
     <div class="spacer">
     </div>
@@ -36,13 +36,13 @@
         <thead class="headertable" >
             <th *ngFor = "let audit of auditHeaders">
                 <div class="dropdown">
-                <button class="dropbtn" *ngIf="audit.labelName== 'User' " >Dropdown</button>
-                        <div class="dropdown-content">
-                        <a (click)= "userSearch('Chanjal N C (chanjal)') ">Chanjal N C</a>
-                          <a (click)="userSearch('shahil cc (shahil)')">Shahil cc</a>
-                          <!-- <a (click)="userSearch('Bishwadeep Chaudhary')">Bishwadeep Chaudhary</a>
-                          <a (click)="userSearch('Ankitha naik')">Ankitha naik</a> -->
-                        </div>
+
+                    <select  *ngIf="audit.id == 'user'  &&  showFlag" type="select" [(ngModel)]="userText" (ngModelChange)="userSearch()" >
+                        <option value="userSearch('Chanjal N C (chanjal)'">Chanjal N C</option>
+                        <option value="userSearch('shahil cc (shahil)')">shahil cc</option>
+                        <option value="userSearch('281642')">281642</option>
+                        <option value="userSearch('281643')">281643</option>
+                    </select>
                         </div>
                         <!-- <div>
                             <input *ngIf="audit.user == 'user'  &&  showFlag" type="dropdown" [(ngModel)]="dropdownn" (ngModelChange)="dropDown()"  >
@@ -67,20 +67,21 @@
 
                 <div>
                     <select  *ngIf="audit.labelName == 'Action'  &&  showFlag" type="select" [(ngModel)]="actionText" (ngModelChange)="actionText()" >
-                        <option value="idSearch('281640')">281640</option>
-                        <option value="idSearch('281641')">281641</option>
-                        <option value="idSearch('281642')">281642</option>
-                        <option value="idSearch('281643')">281643</option>
+                        <option value="actSearch('change')">change</option>
+                        <option value="actSearch('update')">update</option>
+                        <option value="actSearch('delete')">delete</option>
+                        
                     </select>
                 </div>
 
                 <div>
                     <select  *ngIf="audit.labelName == 'Type'  &&  showFlag" type="select" [(ngModel)]="typeText" (ngModelChange)="typeSearch()" >
-                        <option value="idSearch('281640')">281640</option>
-                        <option value="idSearch('281641')">281641</option>
-                        <option value="idSearch('281642')">281642</option>
-                        <option value="idSearch('281643')">281643</option>
+                        <option value="idSearch('Recipe')">Recipe</option>
+                        <option value="idSearch('CSV Download')">CSV Download</option>
+                        <option value="idSearch('Configuration')">Configuration</option>
+                        
                     </select>
+                    
                     
                 </div>
 
