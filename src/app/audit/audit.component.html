@@ -1,0 +1,123 @@
+<div class="toolbar" role="banner" style="width: 100rem;">
+    <span style="margin-left: 20px;">FLUXA</span>
+    <div class="spacer">
+    </div>
+  </div>
+<div class="col-md-6" style="padding-left: 85%;">
+    <div class="icons" style="display: flex" ></div>
+    <button (click)="gotoPre()" [disabled]="prePageAvailable">
+        <i class="fa fa-chevron-left" style="font-size:14px; margin-right: 8px;"></i>
+    </button>
+    {{ pageDetail.pageNu }}/{{ totalPageSizee }}
+    <button (click)="gotoNext()" [disabled]="nextPageAvailablee" >
+        <i class="fa fa-chevron-right" style="font-size:14px; margin-left: 8px;"></i>
+      </button>
+</div>
+<span class="colomnSearch">
+    <a href="Javascript:void(0)" (click)="show()" >
+        <span *ngIf="!showFlag">show column level search
+
+        </span>
+        <span *ngIf="showFlag">Hide column level search
+
+        </span>
+    </a>
+</span>
+<div>
+    <table class="display nowrap table table-hover table-striped table-bordered width-100" border-spacing="0"
+    aria-describedby="table">
+    <div class="table-responsive">
+        <thead class="headertable" >
+                <th *ngFor = "let audit of auditHeaders"> {{audit.labelName}}
+                    <div></div>
+                </th>
+
+        </thead>
+        <thead class="headertable" >
+            <th *ngFor = "let audit of auditHeaders">
+                <div class="dropdown">
+                <button class="dropbtn" *ngIf="audit.labelName== 'User' " >Dropdown</button>
+                        <div class="dropdown-content">
+                        <a (click)= "userSearch('Chanjal N C (chanjal)') ">Chanjal N C</a>
+                          <a (click)="userSearch('shahil cc (shahil)')">Shahil cc</a>
+                          <!-- <a (click)="userSearch('Bishwadeep Chaudhary')">Bishwadeep Chaudhary</a>
+                          <a (click)="userSearch('Ankitha naik')">Ankitha naik</a> -->
+                        </div>
+                        </div>
+                        <!-- <div>
+                            <input *ngIf="audit.user == 'user'  &&  showFlag" type="dropdown" [(ngModel)]="dropdownn" (ngModelChange)="dropDown()"  >
+                        </div> -->
+                <div>
+                    <select  *ngIf="audit.id == 'auditid'  &&  showFlag" type="select" [(ngModel)]="searchText" (ngModelChange)="idSearch()" >
+                        <option value="idSearch('281640')">281640</option>
+                        <option value="idSearch('281641')">281641</option>
+                        <option value="idSearch('281642')">281642</option>
+                        <option value="idSearch('281643')">281643</option>
+                    </select>
+                    
+                </div>
+
+                <div>
+                    <input *ngIf="audit.labelName == 'Subsequence' &&  showFlag" type="text" [(ngModel)]="subsequenceText" (ngModelChange)="subSearch()">
+                </div>
+
+                <div>
+                    <input *ngIf="audit.labelName == 'Message' &&  showFlag" type="text" [(ngModel)]="messageText" (ngModelChange)="msgSearch()">
+                </div>
+
+                <div>
+                    <select  *ngIf="audit.labelName == 'Action'  &&  showFlag" type="select" [(ngModel)]="actionText" (ngModelChange)="actionText()" >
+                        <option value="idSearch('281640')">281640</option>
+                        <option value="idSearch('281641')">281641</option>
+                        <option value="idSearch('281642')">281642</option>
+                        <option value="idSearch('281643')">281643</option>
+                    </select>
+                </div>
+
+                <div>
+                    <select  *ngIf="audit.labelName == 'Type'  &&  showFlag" type="select" [(ngModel)]="typeText" (ngModelChange)="typeSearch()" >
+                        <option value="idSearch('281640')">281640</option>
+                        <option value="idSearch('281641')">281641</option>
+                        <option value="idSearch('281642')">281642</option>
+                        <option value="idSearch('281643')">281643</option>
+                    </select>
+                    
+                </div>
+
+                <div>
+                    <input *ngIf="audit.labelName == 'Label' &&  showFlag" type="text" [(ngModel)]="labelText" (ngModelChange)="labelSearch()">
+                </div>
+
+                <div>
+                    <input *ngIf="audit.labelName == 'Version' &&  showFlag" type="text" [(ngModel)]="versionText" (ngModelChange)="verSearch()">
+                </div>
+
+            </th>
+
+    </thead>
+        <thead>
+        </thead>
+       
+        <!-- <div class="bodytable"> -->
+            
+        <tbody>
+            <tr *ngFor="let audit of body">
+                <td>{{audit.User}}</td>
+                <td>{{audit.ID}}</td>
+                <td>{{audit.Subsequence}}</td>
+                <td>{{audit.Message}}</td>
+                <td>{{audit.Action}}</td>
+                <td>{{audit.Type}}</td>
+                <td>{{audit.Label}}</td>
+                <td>{{audit.Version}}</td>
+            </tr>
+        </tbody>
+   
+        </div>
+    </table>
+    
+        
+        
+      
+      
+</div>

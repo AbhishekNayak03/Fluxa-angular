@@ -1,0 +1,61 @@
+<p>table works!</p>
+<div class="sidenav">
+  <a href="#">Manage Users</a>
+  <a href="#">Define Workflow</a>
+  <a href="#">Define Workspace</a>
+</div>
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <span style="margin-left: 20px;">FLUXA</span>
+    <div class="spacer"></div>
+  </div>
+  <div class="loader" *ngIf="loaders">
+  </div>
+  <div class="content" role="main">
+      <h2>Dashboard</h2>
+      <div class="row" style="width:100%;position: relative;display: flex;">
+        <div class="col-md-6">
+          <button class="button" routerLink="/audit">Audit log</button>
+        </div>
+    
+        <div class="find">
+          <input type="text"  placeholder="Search" [(ngModel)]="search" id="listSearch">
+          <!-- <div class="find" *ngFor="let data of dataSource | searchFilter: search"> -->
+            <!-- <div class="card mb-1card-body">
+              <h5 class="card-title">{{data.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{data.name}}</h6>
+              <p class="card-text">{{data.email}}</p>
+            </div> -->
+          </div>
+        </div>
+        <div class="col-md-6" style="padding-left: 105%;">
+          <div class="icons" style="display: flex">
+            <button (click)="gotoPrevious()" [disabled]="prevPageAvailable">
+              <i class="fa fa-chevron-left" style="font-size:14px; margin-right: 8px;"></i>
+            </button>
+            {{ pageDetails.pageNo }}/{{ totalPageSize }}
+            <button (click)="gotoNext()" [disabled]="nextPageAvailable" >
+              <i class="fa fa-chevron-right" style="font-size:14px; margin-left: 8px;"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th *ngFor="let item of header">{{item.label}}</th>
+                <!-- <button></button> -->
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of body">
+              <td>{{ item.equipment }}</td>
+              <td>{{ item.equipmentID }}</td>
+              <td>{{ item.equipmentDisplayName }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  
+  
